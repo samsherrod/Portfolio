@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../Assets/Images/Backgrounds/pexels-adi-k-3222192.jpg') no-repeat center center fixed;
+    background: url('../assets/Images/Backgrounds/pexels-adi-k-3222192.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
