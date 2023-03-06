@@ -86,9 +86,9 @@
                     </h2>
                     <hr>
                     <p class="intro-text text-center">
-                        In Development - Expected Release March 2023<br />
+                        Released March 2023<br />
                         Student Group Games Development Project<br />
-                        <strong>Role: </strong> Lead Developer
+                        <strong>Role: </strong> Lead Programmer
                     </p> 
                     <a href="../assets/img/projects/Red Knight/red-knight-prototype-img.png">
                         <img class="img-responsive img-border img-left" src="../assets/img/projects/Red Knight/red-knight-prototype-img.png" alt="">
@@ -97,24 +97,50 @@
                     <hr class="visible-xs">
 
                     <p>Red Knight is a 2D action platformer centered around a vampire hunter seeking revenge against Dracula.
-                        It is currently in development being built by myself and 3 other students with the Unity game engine.
-                         It is inspired by games such as Megaman and Enter the Gungeon. A unique aspect of the it is that it 
-                         is both a 2D action platformer and a top down action game similar to Zelda II: The Adventure of Link.</p>
-                    <p>This is a group project made for University of London's Game Development module. The game will be finished 
-                         and playable on WebGL in March 2023.</p>
+                        It was built by myself and 3 other students using the Unity game engine. It is inspired by games such as
+                         Megaman and Enter the Gungeon. A unique aspect of the it is that it is both a 2D action platformer and a
+                         top down action game similar to Zelda II: The Adventure of Link.</p>
+                    <p>This was a group project made for University of London's Game Development module. The game is playable on WebGL
+                        by clicking on the link below.</p>
 
-                    <p>I have more experience with Unity than the rest of my team, and my role in the development phase has mainly
-                        been to support the team. This has included:
+                    <p>My part in the development and programming of this has included:
                         <ul>
-                            <li>building persisting scripts including a game manager, an input manager, and a UI manager</li>
-                            <li>creating a tilemap system with rule tiles for teammates to quickly prototype new levels in
-                                a flexible way</li>
-                            <li>designing game mechanics</li>
-                            <li>setting up the controls using Unity's new Input System</li>
-                            <li>setting up animation state machine</li>
-                            <li>creating our GitHub repository</li>
+                            <li>building a game manager script that persists between scenes, which keeps track of the player's stats such
+                                 as score, lives, bomb count, key count, and the player's health.</li>
+                            <li>optimizing and improving performance by more than 50% by researching best practices, as well as implenting
+                                design patterns such as a singleton for the game managger script, and object pooling for the player's bullets,
+                                bombs, bomb explosion particle effects, enemy projectiles, and boss projectiles.</li>
+                            <li>creating a damage script that is attached to the player's bullets, garlic bombs, enemy projectiles, enemies, 
+                                spikes, and the boss. It included functionality to be able to customize the amount of damage in the inspector, 
+                                a boolean to check if the game object can deal damage upon entering or staying in a 2D trigger (OnTriggerEnter2D
+                                and OnTriggerStay2D), or a boolean to check if the object can kill another object instantly. The spikes and the
+                                rush scene for instance can kill the player instantly.</li>
+                            <li>creating a flexible and scalable health system where the player, destructible objects, all enemies, and the
+                                boss share properties and functions by inheriting from a custom base Health class with virtual and override
+                                functions for each inherited classes allowing them to be independent and yet still share some code from a
+                                parent class such as current and initial health, being able to take damage, or dying. The player and boss each 
+                                have an amount of time they are invincible for upon taking damage as well.</li>
+                            <li>creating all aspects of the UI integrating it with the the player's stats and the game manager script, as
+                                well as for the boss' health bar. This includes designing and programming a UI manager, a main menu, and a
+                                pause menu with a controls page, level selection page, credits page, resume, and exit game functions.</li>
+                            <li>creating a basic camera controller script with parallax that follows the player and is clamped between 4 2d
+                                edge colliders representing the edges of each rectangular level.</li>
+                            <li>creating a fade animation in between scenes</li>
+                            <li>debugging, testing, and fixing bugs in any phase of the development</li>
+                            <li>creating a tilemap system with rule tiles, colliders, sorting layers, and functionality for teammates to
+                                 quickly prototype new levels in an easy and flexible way.</li>
+                            <li>creating a flexible pickup system to allow the player to pickup keys and bombs. The key and bomb classes
+                                inherit from a base pickup class.</li>
+                            <li>designing game mechanics including using garlic bombs, and responsive jump controls</li>
+                            <li>setting up the player's animation state machine, and connecting it through code using an enum to keep track
+                                of which state the player is in.</li>
+                            <li>creating our GitHub repository, as well as commiting, pushing, and merging branches</li>
+                            <li>building it for WebGL and deploying it on Itch.io</li>
                             <li>managing all of our files including our GDD, references, weekly tasks lists, features and more on
                                  our Google Drive.</li>
+                            <li>sending it out for testing to our school community on slack, and adjusting game features and prefrences based
+                                on user feedback.
+                            </li>
                         </ul>
                     </p>
 
@@ -129,8 +155,6 @@
 
                     <a href="https://samsherrod.itch.io/red-knight" target="_blank" class="btn btn-default btn-lg">Play Game Online</a>
                     <a href="https://github.com/samsherrod/red-knight-V2" target="_blank" class="btn btn-default btn-lg">View Source Code</a>
-                    
-                    <p><strong>Keep in mind that this project is in development, and this is not a reflection of the final or completed project.</strong></p>
                 </div>
             </div>
         </div>
